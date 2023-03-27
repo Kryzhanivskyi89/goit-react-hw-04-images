@@ -1,9 +1,7 @@
-import { Component } from 'react';
 import { Dna } from 'react-loader-spinner';
 
- class Loader extends Component {
-    render() {
-        return (
+ function Loader () {
+    return (
             <Dna
                 height="80"
                 width="80"
@@ -25,8 +23,7 @@ import { Dna } from 'react-loader-spinner';
                 wrapperClass=""
                 visible={true}
             />
-        );
-    }
+    );
 }
 
 export default Loader

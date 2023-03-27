@@ -1,21 +1,16 @@
 import PropTypes from 'prop-types';
-import { Component } from 'react';
 import style from '../styles.module.css'
 
-class Button extends Component {
-    render() {
-        const { searchLoadMore, children } = this.props;
-        return (
+function Button ({searchLoadMore, children}) {
+    return (
             <button
                 className={style.Button}
                 onClick={() => {
-                    searchLoadMore();
-                }}
+                    searchLoadMore();}}
             >
                 {children}
             </button>
         );
-    }
 }
 
 Button.propTypes = {
