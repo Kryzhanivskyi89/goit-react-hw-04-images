@@ -42,10 +42,16 @@ const App = () => {
     }, [page, searchText]);
 
 
-    const handleSearch = searchText => {
+    const handleSearch = text => {
+        console.log(text)
+        console.log(searchText)
+         
+        if (text !== searchText) {
+        console.log('Умова виконується')
         setPage(1);
         setImages([]);
-        setSearchText(searchText);        
+        setSearchText(searchText);       
+        };               
     };
 
     const searchLoadMore = () => {
