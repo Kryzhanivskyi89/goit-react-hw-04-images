@@ -42,15 +42,11 @@ const App = () => {
     }, [page, searchText]);
 
 
-    const handleSearch = text => {
-        console.log(text)
-        console.log(searchText)
-         
+    const handleSearch = text => {        
         if (text !== searchText) {
-        console.log('Умова виконується')
         setPage(1);
         setImages([]);
-        setSearchText(searchText);       
+        setSearchText(text);       
         };               
     };
 
